@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #d63384;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #yes {
+            background-color: #ff69b4;
+            color: white;
+        }
+        #no {
+            background-color: #ccc;
+            color: black;
+        }
+        #content {
+            display: none;
+            margin-top: 20px;
+        }
+        .letter {
+            background-color: #fff;
+            border: 2px solid #d63384;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .letter:hover {
+            background-color: #ffe6e6;
+        }
+        img {
+            max-width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my valentines?</h1>
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+
+    <div id="content">
+        <h2>Yay! Happy Valentine's Day! 💖</h2>
+        <img src="i.jpg" alt="Romantic Valentine Image">
+        
+        <div class="letter" onclick="showLetter()">
+            Click here to read my letter 💌
+        </div>
+        
+        <div id="letter-text" style="display: none; margin: 20px auto; max-width: 600px; text-align: left;">
+            <p>Dear Lizbeth Aquino,</p>
+            <p>Hi love, how are you love mahal na mahal po kita tandaan mo yan ipagmamalaki ko sa buong mundo na ikaw ang ang naging girlfriend ang pinakamamahal kong Lizbeth. love alam kong dumaan tayo sa mga pagsubok madalas na nag aaway dahil sa pinaggagawa ko love ahh pero kahit ganon humihingi ako ng sorry wag ka pong mag aalala sakin ikaw at ikaw pa din ang pipiliin ko dahil ikaw ang pinamamahal ko. love sa sngayon hayaan moko ang gagawa sa mga bagay at pangarap nating dalawa hidni habang buhay ganto tayo dadating din ang araw na magsasama tayo sa iisasng bahay. love mahal na mahal kita ahh at alam mona yon ayaw kona pahabain to ipapadama ko nalang sayo ang lahat ng pagmamahal na dapat ay nanararapat sa babaeng katulad mo I love you love</p>
+            <p>Yours Husband este Yours boyfried,</p>
+            <p>Arjay M Gaspar</p>
+        </div>
+        
+        <h3>Some pictures to make you smile:</h3>
+        <img src="l.jpg" alt="Picture 1">
+        <img src="z.jpg" alt="Picture 2">
+        <img src="t.jpg" alt="Picture 3">
+        
+        <h3>And a song just for you:</h3>
+        <audio controls>
+            <source src="SUGARCANE - Leonora (Official Lyric Video).mp3" type="audio/wav">
+            Your browser does not support the audio element. (Placeholder: Replace with your favorite Valentine's song URL, e.g., a public MP3 link.)
+        </audio>
+    </div>
+
+    <script>
+        document.getElementById('no').addEventListener('click', function() {
+            alert('please say yess 😢😢😢😢');
+        });
+
+        document.getElementById('yes').addEventListener('click', function() {
+            document.getElementById('content').style.display = 'block';
+            // Hide the buttons after yes is clicked
+            document.getElementById('yes').style.display = 'none';
+            document.getElementById('no').style.display = 'none';
+        });
+
+        function showLetter() {
+            document.getElementById('letter-text').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
